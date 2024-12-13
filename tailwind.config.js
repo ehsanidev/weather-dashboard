@@ -4,9 +4,21 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        ANregular: ['AvenirNext-Regular'],
-        ANbold: ['AvenirNext-DemiBold'],
-        ANmedium: ['AvenirNext-Medium'],
+        'regularQuicksand': [
+          fontFamily=['Quicksand', 'sans-serif'],
+          fontWeight= 400,
+          fontStyle='normal',
+        ],
+        'mediumQuicksand': [
+          fontFamily=['Quicksand', 'sans-serif'],
+          fontWeight= 500,
+          fontStyle='normal',
+        ],
+        'semiBoldQuicksand': [
+          fontFamily= ['Quicksand', 'sans-serif'],
+          fontWeight=  600,
+          fontStyle= 'normal',
+        ],
       },
     },
   },

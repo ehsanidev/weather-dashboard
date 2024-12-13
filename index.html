@@ -1,115 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./src/output.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
     <title>weather dashboard</title>
-</head>
-<body class="bg-blue-950">
-    <div id="app" class="flex flex-col gap-8">
-        <header class="h-[150px] flex flex-row justify-between items-end px-24">
-            <div id="leftSide" class="h-14 flex flex-row gap-2 items-end justify-evenly">
-                <div class="max-w-4"><img src="./assets/icons/logo.png" alt="logo"></div>
-                <span class="font-ANbold font-bold text-blue-300 pb-[3px]" style="font-size: 13px; line-height: 12px;">
-                    The</br>
-                   Weather</br>
-                   Dashboard
-                </span>
+  </head>
+  <body class="bg-blue-950">
+    <div id="app" class="grid grid-rows-[auto_1fr] h-screen gap-4">
+      <header
+        class="h-[150px] row-start-1 row-end-2 flex flex-row justify-between items-end px-24"
+      >
+        <div
+          id="leftSide"
+          class="h-14 flex flex-row gap-2 items-end justify-evenly"
+        >
+          <div class="max-w-4">
+            <img src="./assets/icons/logo.png" alt="logo" />
+          </div>
+          <span
+            class="font-mediumQuicksand text-blue-300 pb-[3px]"
+            style="font-size: 13px; line-height: 12px"
+          >
+            The<br />
+            Weather<br />
+            Dashboard
+          </span>
+        </div>
+        <div
+          id="rightSide"
+          class="h-14 flex flex-row gap-10 justify-between items-end"
+        >
+          <div
+            class="w-24 h-[18px] outline outline-2 outline-offset-3 rounded outline-blue-300 text-center"
+          >
+            <a href="#" class="h-[100%] w-[100%] block">
+              <span
+                class="block font-regularQuicksand text-blue-300"
+                style="font-size: 13px; line-height: 20px"
+                >Change Settings</span
+              >
+            </a>
+          </div>
+          <a
+            href="#"
+            class="h-[18px] outline outline-2 outline-offset-3 rounded outline-blue-300"
+          >
+            <div class="w-5 p-1">
+              <img src="./assets/icons/art_refresh.png" alt="refresh" />
             </div>
-            <div id="rightSide" class="h-14 flex flex-row gap-10 justify-between items-end">
-                <div class="w-24 h-[18px] outline outline-2 outline-offset-3 rounded outline-blue-300 text-center">
-                    <a href="#" class="h-[100%] w-[100%] block">
-                        <span class="block font-ANregular text-blue-300" style="font-size: 13px; line-height: 20px;">Change Settings</span>
-                    </a>
+          </a>
+        </div>
+      </header>
+      <main
+        class="row-start-2 row-end-3 flex justify-center items-center gap-24 w-full h-full"
+      >
+        <div
+          id="big-parent-left"
+          class="flex justify-end items-center h-full w-full"
+        >
+          <div
+            id="left-card"
+            class="flex flex-col justify-evenly items-center w-[260px] h-[360px] outline outline-4 outline-blue-300 rounded-[7%]"
+          >
+            <h1
+              class="text-blue-300 font-semiBoldQuicksand"
+              style="font-size: 20px; line-height: 30px"
+            >
+              Feels Like
+            </h1>
+            <span
+              class="text-blue-300 font-semiBoldQuicksand"
+              style="font-size: 100px; line-height: 70px"
+              >15°</span
+            >
+            <div id="left-card-bottom" class="flex gap-3 items-center">
+              <div class="w-14">
+                <img src="./assets/icons/art_clear.png" alt="clear" />
+              </div>
+              <div id="l-card-b_right" class="flex flex-col gap-1">
+                <div id="l-card-b_right-top">
+                  <span
+                    class="text-blue-300 font-regularQuicksand"
+                    style="font-size: 25px; line-height: 23px"
+                    >17°/13°</span
+                  >
                 </div>
-                <a href="#" class="h-[18px] outline outline-2 outline-offset-3 rounded outline-blue-300">
-                    <div class="w-5 p-1">
-                    <img src="./assets/icons/art_refresh.png" alt="refresh">
-                    </div>
-                </a>
+                <div id="l-card-b_right-bottom" class="w-24">
+                  <span
+                    class="text-blue-300 font-regularQuicksand h-[100%]"
+                    style="font-size: 10px; line-height: 10px"
+                  >
+                    Precipitation: 100%<br />
+                    Humidity: 67%<br />
+                    Wind: 2m/s
+                  </span>
+                </div>
+              </div>
             </div>
-        </header>
-        <main class="flex justify-center gap-24">
-            <div id="big-parent-left" class="w-[260px] h-[360px] outline outline-4 outline-blue-300 rounded-[7%]">
-                <div id="left-card" class="w-[100%] h-[360px] flex flex-col justify-evenly items-center">
-                    <h1 class="text-blue-300 font-ANmedium" style="font-size: 20px; line-height: 30px;">Feels Like</h1>
-                    <span class="font-ANbold text-blue-300" style="font-size: 100px; line-height: 70px;">15°</span>
-                    <div id="left-card-bottom" class="flex gap-3 items-center">
-                        <div class="w-14"><img src="./assets/icons/art_clear.png" alt="clear"></div>
-                        <div id="l-card-b_right" class="flex flex-col gap-1">
-                            <div id="l-card-b_right-top"><span class="text-blue-300 font-ANmedium" style="font-size: 25px; line-height: 23px;">17°/13°</span></div>
-                            <div id="l-card-b_right-bottom" class="w-24">
-                                <span class="text-blue-300 font-ANmedium h-[100%]" style="font-size: 10px; line-height: 10px;">
-                                    Precipitation: 100%</br>
-                                    Humidity: 67%</br>
-                                    Wind: 2m/s
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+        </div>
+        <div
+          id="big-parent-right"
+          class="flex flex-col items-center justify-center w-full h-full"
+        >
+          <div
+            id="right-cards_top"
+            class="flex items-center justify-start w-full h-full"
+          >
+            <ul
+              id="daysWeather"
+              class="flex justify-center items-center gap-5 w-[80%] h-[170px]"
+            >
+              <li
+                class="flex flex-col outline outline-2 outline-blue-300 rounded-xl items-center justify-evenly h-full w-[100%]"
+              >
+                <span
+                  class="text-blue-300 font-regularQuicksand"
+                  style="font-size: 12px; line-height: 12px"
+                  >Wednesday</span
+                >
+                <div class="w-14">
+                  <img src="./assets/icons/art_clouds.png" alt="clouds" />
                 </div>
-            </div>
-            <div id="big-parent-right" class="flex flex-col h-[100%] gap-8">
-                <div id="right-cards_top" class="w-auto h-[150px]">
-                    <ul id="daysWeather" class="flex justify-between items-center gap-5 h-[150px]">
-                        <li class="flex flex-col outline outline-2 outline-blue-300 rounded h-[150px]">
-                            <span class="text-blue-300">Wednesday</span>
-                            <div class="w-14"><img src="./assets/icons/art_clouds.png" alt="clouds"></div>
-                            <span class="text-blue-300 font-ANmedium" style="font-size: 25px; line-height: 23px;">17°/13°</span>
-                            <span class="text-blue-300">Precipitation: 0%</span>
-                        </li>
-                        <li class="flex flex-col outline outline-2 outline-blue-300 rounded h-[150px]">
-                            <span class="text-blue-300">Wednesday</span>
-                            <div class="w-14"><img src="./assets/icons/art_clouds.png" alt="clouds"></div>
-                            <span class="text-blue-300 font-ANmedium" style="font-size: 25px; line-height: 23px;">17°/13°</span>
-                            <span class="text-blue-300">Precipitation: 0%</span>
-                        </li>
-                        <li class="flex flex-col outline outline-2 outline-blue-300 rounded h-[150px]">
-                            <span class="text-blue-300">Wednesday</span>
-                            <div class="w-14"><img src="./assets/icons/art_clouds.png" alt="clouds"></div>
-                            <span class="text-blue-300 font-ANmedium" style="font-size: 25px; line-height: 23px;">17°/13°</span>
-                            <span class="text-blue-300">Precipitation: 0%</span>
-                        </li>
-                        <li class="flex flex-col outline outline-2 outline-blue-300 rounded h-[150px]">
-                            <span class="text-blue-300">Wednesday</span>
-                            <div class="w-14"><img src="./assets/icons/art_clouds.png" alt="clouds"></div>
-                            <span class="text-blue-300 font-ANmedium" style="font-size: 25px; line-height: 23px;">17°/13°</span>
-                            <span class="text-blue-300">Precipitation: 0%</span>
-                        </li>
-                    </ul>
+                <span
+                  class="text-blue-300 font-regularQuicksand"
+                  style="font-size: 12px; line-height: 12px"
+                  >17°/13°</span
+                >
+                <span
+                  class="text-blue-300 font-regularQuicksand"
+                  style="font-size: 12px; line-height: 12px"
+                  >Precipitation: 0%</span
+                >
+              </li>
+
+              <li
+                class="flex flex-col outline outline-2 outline-blue-300 rounded-xl items-center justify-evenly h-full w-[100%]"
+              >
+                <span
+                  class="text-blue-300 font-regularQuicksand"
+                  style="font-size: 12px; line-height: 12px"
+                  >Thursday</span
+                >
+                <div class="w-14">
+                  <img src="./assets/icons/art_clouds.png" alt="clouds" />
                 </div>
-                <div id="right-card_bottom" class="w-[350px] h-[130px] outline outline-2 outline-offset-8 outline-blue-300 rounded">
-                    <ul id="todayWeather" class="flex justify-evenly text-center items-center rounded">
-                        <li>
-                            <span class="text-blue-300">03:00</span>
-                            <div class="w-14"><img src="./assets/icons/art_clouds.png" alt="clouds"></div>
-                            <span class="text-blue-300">13°</span>
-                        </li>
-                        <li>
-                            <span class="text-blue-300">06:00</span>
-                            <div class="w-14"><img src="./assets/icons/art_clouds.png" alt="clouds"></div>
-                            <span class="text-blue-300">15°</span>
-                        </li>
-                        <li>
-                            <span class="text-blue-300">09:00</span>
-                            <div class="w-14"><img src="./assets/icons/art_clouds.png" alt="clouds"></div>
-                            <span class="text-blue-300">17°</span>
-                        </li>
-                        <li>
-                            <span class="text-blue-300">12:00</span>
-                            <div class="w-14"><img src="./assets/icons/art_rain.png" alt="rain"></div>
-                            <span class="text-blue-300">14°</span>
-                        </li>
-                        <li>
-                            <span class="text-blue-300">15:00</span>
-                            <div class="w-14"><img src="./assets/icons/art_rain.png" alt="rain"></div>
-                            <span class="text-blue-300">14°</span>
-                        </li>
-                    </ul>
+                <span
+                  class="text-blue-300 font-regularQuicksand"
+                  style="font-size: 12px; line-height: 12px"
+                  >16°/11°</span
+                >
+                <span
+                  class="text-blue-300 font-regularQuicksand"
+                  style="font-size: 12px; line-height: 12px"
+                  >Precipitation: 0%</span
+                >
+              </li>
+
+              <li
+                class="flex flex-col outline outline-2 outline-blue-300 rounded-xl items-center justify-evenly h-full w-[100%]"
+              >
+                <span
+                  class="text-blue-300 font-regularQuicksand"
+                  style="font-size: 12px; line-height: 12px"
+                  >Friday</span
+                >
+                <div class="w-14">
+                  <img src="./assets/icons/art_clouds.png" alt="clouds" />
                 </div>
-            </div>
-        </main>
+                <span
+                  class="text-blue-300 font-regularQuicksand"
+                  style="font-size: 12px; line-height: 12px"
+                  >14°/10°</span
+                >
+                <span
+                  class="text-blue-300 font-regularQuicksand"
+                  style="font-size: 12px; line-height: 12px"
+                  >Precipitation: 0%</span
+                >
+              </li>
+
+              <li
+                class="flex flex-col outline outline-2 outline-blue-300 rounded-xl items-center justify-evenly h-full w-[100%]"
+              >
+                <span
+                  class="text-blue-300 font-regularQuicksand"
+                  style="font-size: 12px; line-height: 12px"
+                  >Saturday</span
+                >
+                <div class="w-14">
+                  <img src="./assets/icons/art_rain.png" alt="clouds" />
+                </div>
+                <span
+                  class="text-blue-300 font-regularQuicksand"
+                  style="font-size: 12px; line-height: 12px"
+                  >11°/9°</span
+                >
+                <span
+                  class="text-blue-300 font-regularQuicksand"
+                  style="font-size: 12px; line-height: 12px"
+                  >Precipitation: 0%</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div
+            id="right-card_bottom"
+            class="flex items-start justify-start w-full h-full"
+          >
+            <ul
+              id="todayWeather"
+              class="flex flex-row justify-between text-center w-[60%] h-[170px] py-1 items-start outline outline-2 outline-blue-300 rounded-xl"
+            >
+              <li class="flex flex-col items-center justify-between w-[100%] h-full">
+                <span class="text-blue-300 font-regularQuicksand">03:00</span>
+                <div class="w-14">
+                  <img src="./assets/icons/art_clouds.png" alt="clouds" />
+                </div>
+                <span class="text-blue-300 font-regularQuicksand">13°</span>
+              </li>
+
+              <li class="flex flex-col items-center justify-between w-[100%] h-full">
+                <span class="text-blue-300 font-regularQuicksand">06:00</span>
+                <div class="w-14">
+                  <img src="./assets/icons/art_clouds.png" alt="clouds" />
+                </div>
+                <span class="text-blue-300 font-regularQuicksand">15°</span>
+              </li>
+
+              <li class="flex flex-col items-center justify-between w-[100%] h-full">
+                <span class="text-blue-300 font-regularQuicksand">09:00</span>
+                <div class="w-14">
+                  <img src="./assets/icons/art_clouds.png" alt="clouds" />
+                </div>
+                <span class="text-blue-300 font-regularQuicksand">17°</span>
+              </li>
+
+              <li class="flex flex-col items-center justify-between w-[100%] h-full">
+                <span class="text-blue-300 font-regularQuicksand">12:00</span>
+                <div class="w-14">
+                  <img src="./assets/icons/art_rain.png" alt="rain" />
+                </div>
+                <span class="text-blue-300 font-regularQuicksand">14°</span>
+              </li>
+
+              <li class="flex flex-col items-center justify-between w-[100%] h-full">
+                <span class="text-blue-300 font-regularQuicksand">15:00</span>
+                <div class="w-14">
+                  <img src="./assets/icons/art_rain.png" alt="rain" />
+                </div>
+                <span class="text-blue-300 font-regularQuicksand">14°</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
     </div>
-</body>
+  </body>
 </html>
